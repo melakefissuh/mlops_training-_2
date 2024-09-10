@@ -1,0 +1,8 @@
+services:
+  trail_docker:
+    build:
+      context: .  # Path to the build context, here it's the current directory
+      dockerfile: Dockerfile  # Path to the Dockerfile, adjust if necessary
+    image: trail_docker:v1
+    working_dir: /app
+    command: bash -c "python flask_app.py"
